@@ -1,15 +1,14 @@
 package models.DAO.mem;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 
 import models.DAO.IGenericDAO;
 
 public abstract class MemGenericDAO<T, ID> implements IGenericDAO<T, ID> {
 	
-	private Map<ID, T> list =  new HashMap<ID, T>();
+	private TreeMap<ID, T> list =  new TreeMap<ID, T>();
 	
 	public void create(T entity) {
 		this.list.put(this.getID(entity), entity);
@@ -36,12 +35,12 @@ public abstract class MemGenericDAO<T, ID> implements IGenericDAO<T, ID> {
 	}
 
 	public List<T> findAll() {
-		return null;
+		return new ArrayList<T>(this.list.values());
 	}
 
 	public List<T> findAll(int index, int size) {
-		// TODO Auto-generated method stub
-		return null;
+		List<T> array = new ArrayList<T>(this.list.values());
+		return array.subList(index, (index+size)-1);
 	}
 
 	protected abstract ID getID(T entity);
