@@ -5,11 +5,7 @@ import models.entities.Round;
 public class ControllerProxyWebDeleteRound {
 	private Round round;
 
-	public String processSucess() {
-		return null;
-	}
-
-	public String processFailure() {
+	public String process() {
 		return null;
 	}
 
