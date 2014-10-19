@@ -1,12 +1,9 @@
 package controllersProxy.web;
 
 public class ControllerProxyWebMoveCard {
-	
-	public String processSucess() {
+
+	public String process() {
 		return null;
 	}
 
-	public String processFailure() {
-		return null;
-	}
 }

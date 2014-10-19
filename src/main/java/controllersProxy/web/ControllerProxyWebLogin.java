@@ -6,7 +6,7 @@ public class ControllerProxyWebLogin {
 
 	private User user;
 
-	public String processLogin() {
+	public String process() {
 		return null;
 	}
 	

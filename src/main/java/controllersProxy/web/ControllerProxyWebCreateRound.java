@@ -8,14 +8,10 @@ public class ControllerProxyWebCreateRound  {
 	private Round round;
 	private User user;
 	
-	public String processSucess(){
+	public String process(){
 		return null;
 	}
 	
-	public String processFailure(){
-		return null;
-	}
-
 	public Round getRound() {
 		return round;
 	}
